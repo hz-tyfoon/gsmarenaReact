@@ -1,7 +1,15 @@
+import Contents from "./components/mainContents";
+import Header from "./components/header";
+import Footer from "./components/footer";
+
+import "./App.css";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello Hanzala</h1>
+      <Header />
+      <Contents />
+      <Footer />
     </div>
   );
 }
