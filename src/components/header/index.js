@@ -1,6 +1,5 @@
-import React from "react";
 import logo from "../../logo.png";
-import Section from "../helper/Section";
+import Section from "../helpers/Section";
 
 export default function Header() {
   return (
