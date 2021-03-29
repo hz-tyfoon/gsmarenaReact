@@ -1,7 +1,9 @@
+import Section from "../helpers/Section";
+
 export default function Contents() {
   return (
-    <div>
+    <Section>
       <h2>main Contents</h2>
-    </div>
+    </Section>
   );
 }

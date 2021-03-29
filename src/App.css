@@ -139,3 +139,33 @@ header styles starts
   background-color: #d50000;
   color: #fff;
 }
+
+/* 
+header styles end
+footer styles start
+*/
+
+.foo_logo img {
+  display: block;
+}
+
+.foo_menu {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #889091;
+}
+
+.foo_menu > li {
+  padding: 0 10px;
+}
+
+.foo_menu > li > a {
+  color: #333;
+  font-size: 11px;
+  font-family: arial;
+}
+
+.foo_menu > li > a:hover {
+  color: #d50000;
+  text-decoration: underline;
+}
