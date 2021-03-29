@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import adImg from "../../../advertisement.png";
 export default function Sidebar({ className }) {
   return (
     <div className={className}>
@@ -138,6 +138,9 @@ export default function Sidebar({ className }) {
             </h3>
           </Link>
         </div>
+      </div>
+      <div className="advertise">
+        <img src={adImg} alt="advertisement" />
       </div>
     </div>
   );
