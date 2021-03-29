@@ -105,7 +105,7 @@ header styles starts
   cursor: pointer;
 }
 .header .socials > ul {
-  gap: 15px;
+  gap: 5px;
   flex-direction: row-reverse;
   padding-right: 20px;
 }
@@ -113,6 +113,12 @@ header styles starts
 .header .socials > ul > li a {
   font-size: 22px;
   color: #fff;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+.header .socials > ul > li a:hover {
+  background-color: #d50000;
 }
 
 .head_menu ul.menu_main {

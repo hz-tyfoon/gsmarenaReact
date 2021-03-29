@@ -105,10 +105,7 @@ export default function Header() {
               <a href="#">featured</a>
             </li>
             <li>
-              <a href="#">phone</a>
-            </li>
-            <li>
-              <a href="#">finder</a>
+              <a href="#">phone finder</a>
             </li>
             <li>
               <a href="#">dealsnew</a>
