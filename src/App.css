@@ -1,8 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: #efebe9;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
 }
 
 .mid {
   max-width: 1050px;
   margin: auto;
+}
+
+.d_flx {
+  display: flex;
+}
+
+.ali_c {
+  align-items: center;
+}
+
+.jc_spb {
+  justify-content: space-between;
+}
+
+.jc_spa {
+  justify-content: space-around;
+}
+
+.flw_w {
+  flex-wrap: wrap;
+}
+
+/* 
+header styles starts
+*/
+
+.header {
+  background-color: #9e9e9e;
+}
+
+.header > .mid {
+  background-color: #616161;
+  padding: 10px 0;
+}
+
+.header .logo,
+.header .search,
+.header .socials {
+  flex: 1;
+}
+
+.header .logo > .toggler {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+}
+
+.header .logo > .toggler .minus,
+.header .logo > .toggler .bars {
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+.header .logo > .toggler .bars {
+  font-size: 30px;
+}
+
+.header .logo > .toggler .minus {
+  width: 25px;
+  background: #fff;
+  height: 5px;
+  display: block;
+}
+
+.header .search [type="search"],
+.header .search [type="submit"] {
+  border: 1px solid #ccc;
+}
+
+.header .search [type="search"]:focus,
+.header .search [type="submit"]:focus {
+  outline: none;
+}
+
+.header .search [type="search"] {
+  width: 240px;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.header .search [type="submit"] {
+  padding: 0 10px;
+  cursor: pointer;
+}
+.header .socials > ul {
+  gap: 15px;
+  flex-direction: row-reverse;
+  padding-right: 20px;
+}
+
+.header .socials > ul > li a {
+  font-size: 22px;
+  color: #fff;
+}
+
+.head_menu ul.menu_main {
+  background-color: #e0e0e0;
+}
+
+.head_menu ul.menu_main > li > a {
+  display: block;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 45px;
+  color: #555;
+  padding: 0px 25px;
+  text-transform: uppercase;
+}
+
+.head_menu ul.menu_main > li > a:hover {
+  background-color: #d50000;
+  color: #fff;
 }
