@@ -143,7 +143,7 @@ export default function Sidebar({ className }) {
         <img src={adImg} alt="advertisement" />
       </div>
 
-      <table>
+      {/* <table>
         <thead>
           <tr>
             <th></th>
@@ -158,7 +158,81 @@ export default function Sidebar({ className }) {
             <td>56,985</td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
+
+      <div className="top_10 interest">
+        <h3 className="title">TOP 10 BY DAILY INTEREST</h3>
+        <div className="list_head d_flx jc_spb top_10_typo_style">
+          <h2 className="device">Device</h2>
+          <h2 className="favorites ta_r">Favorites</h2>
+        </div>
+        <ul className="phones">
+          <li>
+            <div className=" d_flx jc_spb">
+              <span className="d_flx">
+                <span className="index ta_r">1.</span>
+                <Link to="/">Sony</Link>
+              </span>
+              <span className="count ta_r">1,174</span>
+            </div>
+          </li>
+          <li>
+            <div className=" d_flx jc_spb">
+              <span className="d_flx">
+                <span className="index ta_r">2.</span>
+                <Link to="/">Sony</Link>
+              </span>
+              <span className="count ta_r">1,174</span>
+            </div>
+          </li>
+          <li>
+            <div className=" d_flx jc_spb">
+              <span className="d_flx">
+                <span className="index ta_r">10.</span>
+                <Link to="/">Sony</Link>
+              </span>
+              <span className="count ta_r">1,174</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div className="top_10 fans">
+        <h3 className="title">top 10 by fans</h3>
+        <div className="list_head d_flx jc_spb top_10_typo_style">
+          <h2 className="device">Device</h2>
+          <h2 className="favorites ta_r">Favorites</h2>
+        </div>
+        <ul className="phones">
+          <li>
+            <div className=" d_flx jc_spb">
+              <span className="d_flx">
+                <span className="index ta_r">1.</span>
+                <Link to="/">Sony</Link>
+              </span>
+              <span className="count ta_r">1,174</span>
+            </div>
+          </li>
+          <li>
+            <div className=" d_flx jc_spb">
+              <span className="d_flx">
+                <span className="index ta_r">2.</span>
+                <Link to="/">Sony</Link>
+              </span>
+              <span className="count ta_r">1,174</span>
+            </div>
+          </li>
+          <li>
+            <div className=" d_flx jc_spb">
+              <span className="d_flx">
+                <span className="index ta_r">10.</span>
+                <Link to="/">Sony</Link>
+              </span>
+              <span className="count ta_r">1,174</span>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
