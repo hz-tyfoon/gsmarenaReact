@@ -51,6 +51,10 @@ ul {
   align-items: center;
 }
 
+.ali_b {
+  align-items: baseline;
+}
+
 .jc_spb {
   justify-content: space-between;
 }
@@ -399,4 +403,99 @@ banner styles
 .contents_all .device img {
   width: 80%;
   margin: 10px auto;
+}
+
+/* 
+phone details styles
+*/
+
+.phone_details .phone_title {
+  background-color: #bbb;
+  padding: 3px 20px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.phone_details .phone_highlights {
+  padding: 30px 10px;
+  gap: 10px;
+  background: linear-gradient(
+    45deg,
+    rgba(242, 33, 4, 0.3),
+    rgba(24, 33, 134, 0.3)
+  );
+}
+
+.phone_details .phone_highlights .col_single {
+  flex: 1;
+  flex-basis: 17%;
+}
+
+.phone_details .phone_highlights .col_single img {
+  border-radius: 15px;
+  /* padding-right: 10px; */
+}
+
+.phone_details .phone_highlights .col_single .infos {
+  margin-top: auto;
+  color: #2b2b2b;
+}
+
+.phone_details .phone_highlights .col_single .infos h3 {
+  font-size: 22px;
+}
+
+.phone_details .phone_highlights .col_single .infos h4 {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+/* 
+  single details page specs all styles 
+*/
+
+.specs_all {
+  padding: 20px 0;
+}
+.specs_all .spec_row {
+  background-color: #fafafa;
+  border-bottom: 5px solid #eeeeee;
+}
+.specs_all .spec_row .spec_title {
+  flex: 1;
+  color: #d50000;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding-left: 5px;
+  padding-top: 2px;
+}
+
+.specs_all .spec_row .specs {
+  flex: 7;
+}
+
+.specs_all .spec_row .specs .feature_title,
+.specs_all .spec_row .specs .f_descs {
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.specs_all .spec_row .specs .feature_title {
+  flex: 1;
+  font-weight: 700;
+  color: #555;
+}
+
+.specs_all .spec_row .specs .f_descs {
+  flex: 5;
+  font-weight: 300;
+}
+
+.specs_all .spec_row .specs .saari {
+  border-bottom: 2px solid #eee;
+}
+
+.specs_all .spec_row .specs .saari:last-child {
+  border-bottom: none;
 }
