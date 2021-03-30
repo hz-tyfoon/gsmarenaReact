@@ -139,9 +139,6 @@ export default function Sidebar({ className }) {
           </Link>
         </div>
       </div>
-      <div className="advertise">
-        <img src={adImg} alt="advertisement" />
-      </div>
 
       {/* <table>
         <thead>
@@ -164,7 +161,7 @@ export default function Sidebar({ className }) {
         <h3 className="title">TOP 10 BY DAILY INTEREST</h3>
         <div className="list_head d_flx jc_spb top_10_typo_style">
           <h2 className="device">Device</h2>
-          <h2 className="favorites ta_r">Favorites</h2>
+          <h2 className="favorites ta_r">Daily hits</h2>
         </div>
         <ul className="phones">
           <li>
@@ -232,6 +229,10 @@ export default function Sidebar({ className }) {
             </div>
           </li>
         </ul>
+      </div>
+
+      <div className="advertise">
+        <img src={adImg} alt="advertisement" />
       </div>
     </div>
   );

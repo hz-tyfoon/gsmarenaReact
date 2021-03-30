@@ -344,3 +344,59 @@ sidebar top 10 lists
   padding-right: 10px;
   width: 20px;
 }
+
+/* 
+banner styles
+*/
+
+.contents_all .banner {
+  position: relative;
+  height: 315px;
+}
+.contents_all .banner > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+.contents_all .banner .jhapsha {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  height: 100%;
+}
+
+.contents_all .banner .title {
+  color: #fff;
+  padding: 40px 0;
+  padding-left: 50px;
+  margin-top: auto;
+  text-transform: uppercase;
+  font-size: 34px;
+}
+
+.contents_all .device {
+  flex: 1;
+  flex-basis: 17%;
+  max-width: 150px;
+  padding: 15px 0;
+}
+
+.contents_all .device h2 {
+  color: #777;
+  text-transform: capitalize;
+  padding: 10px 0;
+  font-size: 14px;
+  background-color: #f5f5f566;
+}
+
+.contents_all .device a:hover h2 {
+  background-color: #d50000;
+  color: #fff;
+}
+
+.contents_all .device img {
+  width: 80%;
+  margin: 10px auto;
+}
