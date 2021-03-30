@@ -142,6 +142,23 @@ export default function Sidebar({ className }) {
       <div className="advertise">
         <img src={adImg} alt="advertisement" />
       </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Device</th>
+            <th>Daily hits</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.</td>
+            <td>Xiaomi Poco F3</td>
+            <td>56,985</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }

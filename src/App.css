@@ -12,13 +12,17 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
 img,
 a {
   display: block;
 }
 
-ul,
-ol {
+ul {
   list-style-type: none;
 }
 
@@ -162,6 +166,10 @@ header styles end
 footer styles start
 */
 
+.footer_main {
+  padding: 20px 0;
+}
+
 .foo_menu {
   margin-left: 10px;
   padding-left: 10px;
@@ -193,6 +201,9 @@ mainContents styles starts
 */
 
 .main_contents .wrapper_contents {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-top: none;
   gap: 10px;
 }
 
@@ -202,6 +213,10 @@ mainContents styles starts
 
 .contents_all {
   flex: 5;
+}
+
+.sidebar {
+  border-right: 1px solid #eee;
 }
 
 .sidebar .phone_finder .title {
@@ -253,3 +268,22 @@ mainContents styles starts
 .sidebar .phone_finder .bottom_titles > a {
   flex: 1;
 }
+
+.sidebar .advertise {
+  padding: 20px 5px;
+}
+/* 
+.sidebar table {
+  text-align: left;
+}
+
+.sidebar table thead,
+.sidebar table tbody {
+  display: block;
+  width: 100%;
+}
+
+.sidebar table tr {
+  display: flex;
+  justify-content: space-between;
+} */

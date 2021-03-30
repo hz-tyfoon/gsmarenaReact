@@ -5,7 +5,7 @@ import logo from "../../foo_logo.png";
 
 export default function Footer() {
   return (
-    <Section>
+    <Section className="footer_main">
       <div className="d_flx ali_c">
         <Link to="/" className="foo_logo">
           <img src={logo} alt="logo" />
