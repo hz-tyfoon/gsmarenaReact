@@ -1,4 +1,4 @@
-export default [
+const phonesData = [
   {
     id: 1,
     brand: "Xiaomi",
@@ -566,3 +566,5 @@ export default [
     },
   },
 ];
+
+export default phonesData;

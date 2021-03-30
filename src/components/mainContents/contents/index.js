@@ -1,5 +1,5 @@
 import Signledetails from "./signleDetails";
-import TopPhones from "./topPhones";
+// import TopPhones from "./topPhones";
 
 export default function Content({ className }) {
   return (

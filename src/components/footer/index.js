@@ -33,27 +33,27 @@ export default function Footer() {
             <Link to="/">FAQ</Link>
           </li>
           <li>
-            <a href="http://google.com" target="_blank">
+            <a href="http://google.com" target="_blank" rel="noreferrer">
               RSS feed
             </a>
           </li>
           <li>
-            <a href="http://google.com" target="_blank">
+            <a href="http://google.com" target="_blank" rel="noreferrer">
               Youtube
             </a>
           </li>
           <li>
-            <a href="http://google.com" target="_blank">
+            <a href="http://google.com" target="_blank" rel="noreferrer">
               Facebook
             </a>
           </li>
           <li>
-            <a href="http://google.com" target="_blank">
+            <a href="http://google.com" target="_blank" rel="noreferrer">
               Twitter
             </a>
           </li>
           <li>
-            <a href="http://google.com" target="_blank">
+            <a href="http://google.com" target="_blank" rel="noreferrer">
               Instagram
             </a>
           </li>

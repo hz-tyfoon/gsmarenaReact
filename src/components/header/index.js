@@ -17,9 +17,9 @@ export default function Header() {
               onClick={() => setMenuExpanded((prevState) => !prevState)}
             >
               {menuExpanded ? (
-                <span class="minus"></span>
+                <span className="minus"></span>
               ) : (
-                <i class="hzt-icon bars">&#xf0c9;</i>
+                <i className="hzt-icon bars">&#xf0c9;</i>
               )}
             </div>
             <Link to="/">
@@ -35,50 +35,50 @@ export default function Header() {
             >
               <input type="search" name="search" placeholder="Search" />
               <button type="submit">
-                <i class="hzt-icon search">&#xe801;</i>{" "}
+                <i className="hzt-icon search">&#xe801;</i>{" "}
               </button>
             </form>
           </div>
           <div className="socials ">
             <ul className="d_flx">
               <li>
-                <a href="http://google.com" target="_blank">
-                  <i class="hzt-icon user-plus">&#xf234;</i>
+                <a href="http://google.com" target="_blank" rel="noreferrer">
+                  <i className="hzt-icon user-plus">&#xf234;</i>
                 </a>
               </li>
               <li>
-                <a href="http://google.com" target="_blank">
-                  <i class="hzt-icon instagram">&#xf16d;</i>
+                <a href="http://google.com" target="_blank" rel="noreferrer">
+                  <i className="hzt-icon instagram">&#xf16d;</i>
                 </a>
               </li>
               <li>
-                <a href="http://google.com" target="_blank">
-                  <i class="hzt-icon youtube">&#xf16a;</i>
+                <a href="http://google.com" target="_blank" rel="noreferrer">
+                  <i className="hzt-icon youtube">&#xf16a;</i>
                 </a>
               </li>
               <li>
-                <a href="http://google.com" target="_blank">
-                  <i class="hzt-icon rss">&#xf09e;</i>
+                <a href="http://google.com" target="_blank" rel="noreferrer">
+                  <i className="hzt-icon rss">&#xf09e;</i>
                 </a>
               </li>
               <li>
-                <a href="http://google.com" target="_blank">
-                  <i class="hzt-icon facebook">&#xf09a;</i>
+                <a href="http://google.com" target="_blank" rel="noreferrer">
+                  <i className="hzt-icon facebook">&#xf09a;</i>
                 </a>
               </li>
               <li>
-                <a href="http://google.com" target="_blank">
-                  <i class="hzt-icon twitter">&#xf099;</i>
+                <a href="http://google.com" target="_blank" rel="noreferrer">
+                  <i className="hzt-icon twitter">&#xf099;</i>
                 </a>
               </li>
               <li>
-                <a href="http://google.com" target="_blank">
-                  <i class="hzt-icon login">&#xe800;</i>
+                <a href="http://google.com" target="_blank" rel="noreferrer">
+                  <i className="hzt-icon login">&#xe800;</i>
                 </a>
               </li>
               <li>
-                <a href="http://google.com" target="_blank">
-                  <i class="hzt-icon bulb">&#xf0eb;</i>
+                <a href="http://google.com" target="_blank" rel="noreferrer">
+                  <i className="hzt-icon bulb">&#xf0eb;</i>
                 </a>
               </li>
             </ul>
@@ -90,34 +90,34 @@ export default function Header() {
         <Section className="head_menu">
           <ul className="d_flx ali_c  flw_w menu_main">
             <li>
-              <a href="#">home</a>
+              <Link to="/">home</Link>
             </li>
             <li>
-              <a href="#">news</a>
+              <Link to="/">news</Link>
             </li>
             <li>
-              <a href="#">reviews</a>
+              <Link to="/">reviews</Link>
             </li>
             <li>
-              <a href="#">videos</a>
+              <Link to="/">videos</Link>
             </li>
             <li>
-              <a href="#">featured</a>
+              <Link to="/">featured</Link>
             </li>
             <li>
-              <a href="#">phone finder</a>
+              <Link to="/">phone finder</Link>
             </li>
             <li>
-              <a href="#">dealsnew</a>
+              <Link to="/">dealsnew</Link>
             </li>
             <li>
-              <a href="#">tools</a>
+              <Link to="/">tools</Link>
             </li>
             <li>
-              <a href="#">coverage</a>
+              <Link to="/">coverage</Link>
             </li>
             <li>
-              <a href="#">contact</a>
+              <Link to="/">contact</Link>
             </li>
           </ul>
         </Section>
@@ -131,20 +131,20 @@ export default function Header() {
         onFocus={(e) => console.log(e, "focused")}
         onBlur={(e) => console.log(e, "blurred")}
       />
-      <i class="hzt-icon login">&#xe800;</i>
-      <i class="hzt-icon search">&#xe801;</i>
-      <i class="hzt-icon lists">&#xe802;</i>
-      <i class="hzt-icon sound">&#xe803;</i>
-      <i class="hzt-icon right-dir">&#xe804;</i>
-      <i class="hzt-icon twitter">&#xf099;</i>
-      <i class="hzt-icon facebook">&#xf09a;</i>
-      <i class="hzt-icon rss">&#xf09e;</i>
-      <i class="hzt-icon menu">&#xf0c9;</i>
-      <i class="hzt-icon bulb">&#xf0eb;</i>
-      <i class="hzt-icon phone">&#xf10b;</i>
-      <i class="hzt-icon youtube">&#xf16a;</i>
-      <i class="hzt-icon instagram">&#xf16d;</i>
-      <i class="hzt-icon user-plus">&#xf234;</i>
+      <i className="hzt-icon login">&#xe800;</i>
+      <i className="hzt-icon search">&#xe801;</i>
+      <i className="hzt-icon lists">&#xe802;</i>
+      <i className="hzt-icon sound">&#xe803;</i>
+      <i className="hzt-icon right-dir">&#xe804;</i>
+      <i className="hzt-icon twitter">&#xf099;</i>
+      <i className="hzt-icon facebook">&#xf09a;</i>
+      <i className="hzt-icon rss">&#xf09e;</i>
+      <i className="hzt-icon menu">&#xf0c9;</i>
+      <i className="hzt-icon bulb">&#xf0eb;</i>
+      <i className="hzt-icon phone">&#xf10b;</i>
+      <i className="hzt-icon youtube">&#xf16a;</i>
+      <i className="hzt-icon instagram">&#xf16d;</i>
+      <i className="hzt-icon user-plus">&#xf234;</i>
        */}
     </>
   );

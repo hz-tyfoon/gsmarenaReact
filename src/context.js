@@ -1,5 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
+import allData from "./phonesData";
 
-export default function ContextProvider() {
-  return <div>cool</div>;
+const Context = createContext();
+
+function ContextProvider({ children }) {
+  const [datas, setDatas] = useState(null);
+
+  useEffect(() => {
+    // simulating getting data from an api
+    setTimeout(() => {
+      setDatas(allData);
+    }, 1000);
+  }, []);
+
+  return <Context.Provider value={{ datas }}>{children}</Context.Provider>;
 }
+
+export { ContextProvider, Context };

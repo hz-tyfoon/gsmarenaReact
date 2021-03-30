@@ -6,7 +6,7 @@ export default function Sidebar({ className }) {
       <div className="phone_finder">
         <Link to="/">
           <h3 className="title d_flx ali_c jc_c">
-            <i class="hzt-icon phone">&#xf10b;</i>
+            <i className="hzt-icon phone">&#xf10b;</i>
             <span className="text">phone finder</span>
           </h3>
         </Link>
@@ -127,13 +127,13 @@ export default function Sidebar({ className }) {
         <div className="bottom_titles d_flx jc_spb">
           <Link to="/">
             <h3 className="title d_flx ali_c jc_c">
-              <i class="hzt-icon lists">&#xe802;</i>
+              <i className="hzt-icon lists">&#xe802;</i>
               <span className="text">all brands</span>
             </h3>
           </Link>
           <Link to="/">
             <h3 className="title d_flx ali_c jc_c">
-              <i class="hzt-icon sound">&#xe803;</i>
+              <i className="hzt-icon sound">&#xe803;</i>
               <span className="text">rumor mill</span>
             </h3>
           </Link>
