@@ -3,8 +3,7 @@ import { useParams } from "react-router-dom";
 export default function SignleDetails({ useContext, Context }) {
   const { datas, urlFy } = useContext(Context);
 
-  const params = useParams();
-  const { urlBrand, urlModel } = params;
+  const { urlBrand, urlModel } = useParams();
 
   const clickedItem =
     datas.length > 0
@@ -164,6 +163,10 @@ export default function SignleDetails({ useContext, Context }) {
       </div>
     );
   } else {
-    return <h2 className="ta_c">Not Found</h2>;
+    return (
+      <h2 style={{ fontSize: "90px", paddingTop: "200px" }} className="ta_c">
+        Not Found
+      </h2>
+    );
   }
 }

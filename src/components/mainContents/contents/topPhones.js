@@ -1,12 +1,8 @@
 import Banner from "../../../banner.png";
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function TopPhones({ useContext, Context }) {
   const { topHits, urlFy } = useContext(Context);
-
-  const { path, url } = useRouteMatch();
-
-  console.log({ path, url });
 
   return (
     <>

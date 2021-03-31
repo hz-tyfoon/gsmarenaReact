@@ -4,6 +4,7 @@ import allData from "./phonesData";
 const Context = createContext();
 
 function ContextProvider({ children }) {
+  const [brands, setBrands] = useState([]);
   const [datas, setDatas] = useState([]);
   const [topHits, setTopHits] = useState([]);
   const [topLiked, setTopLiked] = useState([]);
@@ -20,10 +21,11 @@ function ContextProvider({ children }) {
   useEffect(() => {
     setTopHits([...datas].sort((a, b) => b.hitsAvg - a.hitsAvg));
     setTopLiked([...datas].sort((a, b) => b.usersLike - a.usersLike));
+    setBrands([...new Set(datas.map((item) => item.brand))]);
   }, [datas]);
 
   return (
-    <Context.Provider value={{ datas, topHits, topLiked, urlFy }}>
+    <Context.Provider value={{ datas, brands, topHits, topLiked, urlFy }}>
       {children}
     </Context.Provider>
   );

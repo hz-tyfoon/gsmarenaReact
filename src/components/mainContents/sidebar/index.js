@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { Context } from "../../../context";
 
 export default function Sidebar({ className }) {
-  const { topHits, topLiked, urlFy } = useContext(Context);
+  const { brands, topHits, topLiked, urlFy } = useContext(Context);
 
   const top10 = (arr) => {
     const newArr = [];
@@ -37,7 +37,15 @@ export default function Sidebar({ className }) {
 
         <div className="brands ">
           <ul className="d_grid ta_c">
-            <li>
+            {brands.length > 0
+              ? brands.map((item, index) => (
+                  <li key={index}>
+                    <Link to={`/phones/${urlFy(item)}`}>{item}</Link>
+                  </li>
+                ))
+              : null}
+
+            {/* <li>
               <Link to="/">samsung</Link>
             </li>
             <li>
@@ -144,7 +152,7 @@ export default function Sidebar({ className }) {
             </li>
             <li>
               <Link to="/">PLUM</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 
