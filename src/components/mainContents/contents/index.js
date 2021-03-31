@@ -1,12 +1,18 @@
 import Signledetails from "./signleDetails";
-// import TopPhones from "./topPhones";
+import TopPhones from "./topPhones";
+
+import { Route, Switch } from "react-router-dom";
 
 export default function Content({ className }) {
   return (
     <div className={className}>
-      <Signledetails />
+      <Switch>
+        <Route path="/">
+          <TopPhones />
+        </Route>
+      </Switch>
 
-      {/* <TopPhones /> */}
+      {/* <Signledetails /> */}
     </div>
   );
 }

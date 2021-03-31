@@ -1,7 +1,16 @@
 import Banner from "../../../banner.png";
-import { Link } from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
+
+import { useContext } from "react";
+import { Context } from "../../../context";
 
 export default function TopPhones() {
+  const { topHits, urlFy } = useContext(Context);
+
+  const { path, url } = useRouteMatch();
+
+  console.log({ path, url });
+
   return (
     <>
       <div className="banner">
@@ -11,69 +20,22 @@ export default function TopPhones() {
         </div>
       </div>
 
-      <div className="list_phone jc_spb d_flx flw_w">
-        <div className="device ta_c">
-          <Link to="/">
-            <img src="images/single_phone.png" alt="" />
-            <h2 className="">Xiaomi Mi 11 Lite</h2>
-          </Link>
-        </div>
-
-        <div className="device ta_c">
-          <Link to="/">
-            <img src="images/single_phone.png" alt="" />
-            <h2 className="">Xiaomi Mi 11 Lite</h2>
-          </Link>
-        </div>
-
-        <div className="device ta_c">
-          <Link to="/">
-            <img src="images/single_phone.png" alt="" />
-            <h2 className="">Xiaomi Mi 11 Lite</h2>
-          </Link>
-        </div>
-
-        <div className="device ta_c">
-          <Link to="/">
-            <img src="images/single_phone.png" alt="" />
-            <h2 className="">Xiaomi Mi 11 Lite</h2>
-          </Link>
-        </div>
-
-        <div className="device ta_c">
-          <Link to="/">
-            <img src="images/single_phone.png" alt="" />
-            <h2 className="">Xiaomi Mi 11 Lite</h2>
-          </Link>
-        </div>
-
-        <div className="device ta_c">
-          <Link to="/">
-            <img src="images/single_phone.png" alt="" />
-            <h2 className="">Xiaomi Mi 11 Lite</h2>
-          </Link>
-        </div>
-
-        <div className="device ta_c">
-          <Link to="/">
-            <img src="images/single_phone.png" alt="" />
-            <h2 className="">Xiaomi Mi 11 Lite</h2>
-          </Link>
-        </div>
-
-        <div className="device ta_c">
-          <Link to="/">
-            <img src="images/single_phone.png" alt="" />
-            <h2 className="">Xiaomi Mi 11 Lite</h2>
-          </Link>
-        </div>
-
-        <div className="device ta_c">
-          <Link to="/">
-            <img src="images/single_phone.png" alt="" />
-            <h2 className="">Xiaomi Mi 11 Lite</h2>
-          </Link>
-        </div>
+      <div className="list_phone  d_flx flw_w">
+        {topHits.length > 0
+          ? topHits.map((item) => (
+              <div key={item.id} className="device ta_c">
+                <Link
+                  to={`${urlFy(item.brand)}/${urlFy(item.modelName)}/details`}
+                >
+                  <img
+                    src={item.phoneImg}
+                    alt={`${item.brand} ${item.modelName}`}
+                  />
+                  <h2>{`${item.brand} ${item.modelName}`}</h2>
+                </Link>
+              </div>
+            ))
+          : null}
       </div>
     </>
   );

@@ -144,7 +144,7 @@ const phonesData = [
     id: 4,
     brand: "Xiaomi",
     modelName: "Poco X3 Pro",
-    phoneImg: "images/01.png",
+    phoneImg: "images/04.png",
     hitsAvg: 675,
     usersLike: 1454,
     rumored: true,

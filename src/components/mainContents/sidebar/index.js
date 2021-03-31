@@ -1,6 +1,30 @@
 import { Link } from "react-router-dom";
 import adImg from "../../../advertisement.png";
+
+import { useContext } from "react";
+import { Context } from "../../../context";
+
 export default function Sidebar({ className }) {
+  const { topHits, topLiked } = useContext(Context);
+
+  const top10 = (arr) => {
+    const newArr = [];
+
+    if (arr.length >= 10) {
+      for (let i = 0; i < 10; i++) {
+        newArr.push(arr[i]);
+      }
+    } else {
+      for (let i = 0; i < arr.length; i++) {
+        newArr.push(arr[i]);
+      }
+    }
+
+    return newArr;
+  };
+
+  console.log(top10(topHits), top10(topLiked));
+
   return (
     <div className={className}>
       <div className="phone_finder">
@@ -140,23 +164,6 @@ export default function Sidebar({ className }) {
         </div>
       </div>
 
-      {/* <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Device</th>
-            <th>Daily hits</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1.</td>
-            <td>Xiaomi Poco F3</td>
-            <td>56,985</td>
-          </tr>
-        </tbody>
-      </table> */}
-
       <div className="top_10 interest">
         <h3 className="title">TOP 10 BY DAILY INTEREST</h3>
         <div className="list_head d_flx jc_spb top_10_typo_style">
@@ -164,33 +171,19 @@ export default function Sidebar({ className }) {
           <h2 className="favorites ta_r">Daily hits</h2>
         </div>
         <ul className="phones">
-          <li>
-            <div className=" d_flx jc_spb">
-              <span className="d_flx">
-                <span className="index ta_r">1.</span>
-                <Link to="/">Sony</Link>
-              </span>
-              <span className="count ta_r">1,174</span>
-            </div>
-          </li>
-          <li>
-            <div className=" d_flx jc_spb">
-              <span className="d_flx">
-                <span className="index ta_r">2.</span>
-                <Link to="/">Sony</Link>
-              </span>
-              <span className="count ta_r">1,174</span>
-            </div>
-          </li>
-          <li>
-            <div className=" d_flx jc_spb">
-              <span className="d_flx">
-                <span className="index ta_r">10.</span>
-                <Link to="/">Sony</Link>
-              </span>
-              <span className="count ta_r">1,174</span>
-            </div>
-          </li>
+          {topHits.length > 0
+            ? top10(topHits).map((item, index) => (
+                <li key={item.id}>
+                  <div className=" d_flx jc_spb">
+                    <span className="d_flx">
+                      <span className="index ta_r">{`${index + 1}.`}</span>
+                      <Link to="/">{`${item.brand} ${item.modelName}`}</Link>
+                    </span>
+                    <span className="count ta_r">{item.hitsAvg}</span>
+                  </div>
+                </li>
+              ))
+            : null}
         </ul>
       </div>
 
@@ -201,33 +194,19 @@ export default function Sidebar({ className }) {
           <h2 className="favorites ta_r">Favorites</h2>
         </div>
         <ul className="phones">
-          <li>
-            <div className=" d_flx jc_spb">
-              <span className="d_flx">
-                <span className="index ta_r">1.</span>
-                <Link to="/">Sony</Link>
-              </span>
-              <span className="count ta_r">1,174</span>
-            </div>
-          </li>
-          <li>
-            <div className=" d_flx jc_spb">
-              <span className="d_flx">
-                <span className="index ta_r">2.</span>
-                <Link to="/">Sony</Link>
-              </span>
-              <span className="count ta_r">1,174</span>
-            </div>
-          </li>
-          <li>
-            <div className=" d_flx jc_spb">
-              <span className="d_flx">
-                <span className="index ta_r">10.</span>
-                <Link to="/">Sony</Link>
-              </span>
-              <span className="count ta_r">1,174</span>
-            </div>
-          </li>
+          {topLiked.length > 0
+            ? top10(topLiked).map((item, index) => (
+                <li key={item.id}>
+                  <div className=" d_flx jc_spb">
+                    <span className="d_flx">
+                      <span className="index ta_r">{index + 1}.</span>
+                      <Link to="/">{`${item.brand} ${item.modelName}`}</Link>
+                    </span>
+                    <span className="count ta_r">{item.usersLike}</span>
+                  </div>
+                </li>
+              ))
+            : null}
         </ul>
       </div>
 
