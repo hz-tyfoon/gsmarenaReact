@@ -5,6 +5,7 @@ import { Context } from "../../../context";
 
 import { Route, Switch } from "react-router-dom";
 import PhonesByBrand from "./phonesByBrand";
+import NotFount from "./notFount";
 
 export default function Content({ className }) {
   return (
@@ -16,8 +17,11 @@ export default function Content({ className }) {
         <Route path="/phones/:phoneBrand">
           <PhonesByBrand useContext={useContext} Context={Context} />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <TopPhones useContext={useContext} Context={Context} />
+        </Route>
+        <Route>
+          <NotFount />
         </Route>
       </Switch>
     </div>

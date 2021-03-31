@@ -1,5 +1,6 @@
 import Banner from "../../../banner.png";
 import { Link, useParams } from "react-router-dom";
+import NotFount from "./notFount";
 
 export default function PhonesByBrand({ useContext, Context }) {
   const { phoneBrand } = useParams();
@@ -36,9 +37,7 @@ export default function PhonesByBrand({ useContext, Context }) {
           </div>
         </>
       ) : (
-        <h2 style={{ fontSize: "90px", paddingTop: "200px" }} className="ta_c">
-          Not Found
-        </h2>
+        <NotFount />
       )}
     </>
   );
