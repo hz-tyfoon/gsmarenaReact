@@ -1,21 +1,19 @@
 import Signledetails from "./signleDetails";
 import TopPhones from "./topPhones";
+import { useContext } from "react";
+import { Context } from "../../../context";
 
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 export default function Content({ className }) {
-  const location = useLocation();
-
-  console.log({ location });
-
   return (
     <div className={className}>
       <Switch>
-        <Route path="/details/:brand/:model">
-          <Signledetails />
+        <Route path="/details/:urlBrand/:urlModel">
+          <Signledetails useContext={useContext} Context={Context} />
         </Route>
         <Route path="/">
-          <TopPhones />
+          <TopPhones useContext={useContext} Context={Context} />
         </Route>
       </Switch>
     </div>

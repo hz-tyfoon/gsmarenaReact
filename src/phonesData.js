@@ -36,7 +36,7 @@ const phonesData = [
       type: "li-po",
       mah: 5000,
     },
-    ram: [8, 12],
+    ram: [4],
     chipset: "snapdragon 888",
     camera: {
       mp: 50,
@@ -83,7 +83,7 @@ const phonesData = [
       type: "li-po",
       mah: 5000,
     },
-    ram: [8, 12],
+    ram: [3, 4],
     chipset: "snapdragon 888",
     camera: {
       mp: 50,
@@ -272,7 +272,7 @@ const phonesData = [
       type: "li-po",
       mah: 5000,
     },
-    ram: [8, 12],
+    ram: [4],
     chipset: "snapdragon 888",
     camera: {
       mp: 50,
@@ -319,7 +319,7 @@ const phonesData = [
       type: "li-po",
       mah: 5000,
     },
-    ram: [8, 12],
+    ram: [3],
     chipset: "snapdragon 888",
     camera: {
       mp: 50,
@@ -366,7 +366,7 @@ const phonesData = [
       type: "li-po",
       mah: 5000,
     },
-    ram: [8, 12],
+    ram: [4, 6],
     chipset: "snapdragon 888",
     camera: {
       mp: 50,
@@ -413,7 +413,7 @@ const phonesData = [
       type: "li-po",
       mah: 5000,
     },
-    ram: [8, 12],
+    ram: [2],
     chipset: "snapdragon 888",
     camera: {
       mp: 50,
