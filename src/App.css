@@ -115,6 +115,20 @@ header styles starts
   display: block;
 }
 
+.header .search {
+  position: relative;
+}
+
+.header .search .suggessions {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #616161;
+}
+
 .header .search [type="search"],
 .header .search [type="submit"] {
   border: 1px solid #ccc;
@@ -126,7 +140,7 @@ header styles starts
 }
 
 .header .search [type="search"] {
-  width: 240px;
+  width: 100%;
   font-size: 16px;
   padding: 5px 10px;
 }
@@ -135,6 +149,7 @@ header styles starts
   padding: 0 10px;
   cursor: pointer;
 }
+
 .header .socials > ul {
   gap: 5px;
   flex-direction: row-reverse;

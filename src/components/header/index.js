@@ -1,11 +1,33 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import logo from "../../logo.png";
 import Section from "../helpers/Section";
+import { Context } from "../../context";
 
 export default function Header() {
   const [menuExpanded, setMenuExpanded] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
+
+  const { datas } = useContext(Context);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("submit", e);
+  };
+  const handleFocus = (e) => {
+    console.log("focus", e);
+    setIsSearchFocused(true);
+  };
+  const handleBlur = (e) => {
+    console.log("blur", e);
+    setIsSearchFocused(false);
+  };
+  const handleChange = (e) => {
+    console.log(e.target.value);
+    setSearchValue(e.target.value);
+  };
 
   return (
     <>
@@ -27,17 +49,28 @@ export default function Header() {
             </Link>
           </div>
           <div className="search">
-            <form
-              className="d_flx "
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
-            >
-              <input type="search" name="search" placeholder="Search" />
+            <form className="d_flx " onSubmit={handleSubmit}>
+              <input
+                type="search"
+                name="search"
+                value={searchValue}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                onFocus={handleFocus}
+                placeholder="Search"
+              />
               <button type="submit">
                 <i className="hzt-icon search">&#xe801;</i>{" "}
               </button>
             </form>
+
+            {isSearchFocused ? (
+              <div className="suggessions">
+                <div className="matched_item d_flx">
+                  <h3 className="tite">GOOGLE Redmi nice</h3>
+                </div>
+              </div>
+            ) : null}
           </div>
           <div className="socials ">
             <ul className="d_flx">

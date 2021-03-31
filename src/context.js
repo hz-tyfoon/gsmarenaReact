@@ -15,7 +15,7 @@ function ContextProvider({ children }) {
     // simulating getting data from an api
     setTimeout(() => {
       setDatas(allData);
-    }, 1000);
+    }, 0);
   }, []);
 
   useEffect(() => {
