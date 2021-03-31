@@ -25,7 +25,7 @@ export default function TopPhones() {
           ? topHits.map((item) => (
               <div key={item.id} className="device ta_c">
                 <Link
-                  to={`${urlFy(item.brand)}/${urlFy(item.modelName)}/details`}
+                  to={`/details/${urlFy(item.brand)}/${urlFy(item.modelName)}/`}
                 >
                   <img
                     src={item.phoneImg}

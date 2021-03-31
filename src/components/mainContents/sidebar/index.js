@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { Context } from "../../../context";
 
 export default function Sidebar({ className }) {
-  const { topHits, topLiked } = useContext(Context);
+  const { topHits, topLiked, urlFy } = useContext(Context);
 
   const top10 = (arr) => {
     const newArr = [];
@@ -28,7 +28,7 @@ export default function Sidebar({ className }) {
   return (
     <div className={className}>
       <div className="phone_finder">
-        <Link to="/">
+        <Link to="/search">
           <h3 className="title d_flx ali_c jc_c">
             <i className="hzt-icon phone">&#xf10b;</i>
             <span className="text">phone finder</span>
@@ -177,7 +177,11 @@ export default function Sidebar({ className }) {
                   <div className=" d_flx jc_spb">
                     <span className="d_flx">
                       <span className="index ta_r">{`${index + 1}.`}</span>
-                      <Link to="/">{`${item.brand} ${item.modelName}`}</Link>
+                      <Link
+                        to={`/details/${urlFy(item.brand)}/${urlFy(
+                          item.modelName
+                        )}/`}
+                      >{`${item.brand} ${item.modelName}`}</Link>
                     </span>
                     <span className="count ta_r">{item.hitsAvg}</span>
                   </div>
@@ -200,7 +204,11 @@ export default function Sidebar({ className }) {
                   <div className=" d_flx jc_spb">
                     <span className="d_flx">
                       <span className="index ta_r">{index + 1}.</span>
-                      <Link to="/">{`${item.brand} ${item.modelName}`}</Link>
+                      <Link
+                        to={`/details/${urlFy(item.brand)}/${urlFy(
+                          item.modelName
+                        )}/`}
+                      >{`${item.brand} ${item.modelName}`}</Link>
                     </span>
                     <span className="count ta_r">{item.usersLike}</span>
                   </div>

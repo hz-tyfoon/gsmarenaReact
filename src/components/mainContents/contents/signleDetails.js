@@ -1,10 +1,16 @@
-export default function SignleDetails() {
+import { useParams } from "react-router-dom";
+
+export default function SignleDetails(props) {
+  const params = useParams();
+
+  console.log({ props, params });
+
   return (
     <div className="phone_details">
       <h2 className="phone_title">Xiaomi Mi 11 Ultra</h2>
       <div className="phone_highlights d_flx flw_w">
         <div className="col_single avatar">
-          <img src="images/single_phone.png" alt="" />
+          <img src="/images/11.png" alt="" />
         </div>
         <div className="col_single d_flx ">
           <div className="infos">
