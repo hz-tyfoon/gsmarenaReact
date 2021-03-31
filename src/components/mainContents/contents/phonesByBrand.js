@@ -21,21 +21,18 @@ export default function PhonesByBrand({ useContext, Context }) {
               <h2 className="title ">Top Phones</h2>
             </div>
           </div>
-
           <div className="list_phone  d_flx flw_w">
-            {phonesbyBrand.map((item) => (
-              <div key={item.id} className="device ta_c">
-                <Link
-                  to={`/details/${urlFy(item.brand)}/${urlFy(item.modelName)}/`}
-                >
-                  <img
-                    src={item.phoneImg}
-                    alt={`${item.brand} ${item.modelName}`}
-                  />
-                  <h2>{`${item.brand} ${item.modelName}`}</h2>
-                </Link>
-              </div>
-            ))}
+            {phonesbyBrand.map((item) => {
+              const { id, brand, modelName, phoneImg } = item;
+              return (
+                <div key={id} className="device ta_c">
+                  <Link to={`/details/${urlFy(brand)}/${urlFy(modelName)}/`}>
+                    <img src={phoneImg} alt={`${brand} ${modelName}`} />
+                    <h2>{`${brand} ${modelName}`}</h2>
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </>
       ) : (
