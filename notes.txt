@@ -3,3 +3,5 @@ Links:
 2) /all_brands
 3) /search
 4) `/${urlFy(item.brand)}/${urlFy(item.modelName)}/`
+5) /brands
+6) /rumored

@@ -44,8 +44,8 @@ export default function Sidebar({ className }) {
                   </li>
                 ))
               : null}
-
-            {/* <li>
+            <>
+              {/* <li>
               <Link to="/">samsung</Link>
             </li>
             <li>
@@ -153,17 +153,18 @@ export default function Sidebar({ className }) {
             <li>
               <Link to="/">PLUM</Link>
             </li> */}
+            </>
           </ul>
         </div>
 
         <div className="bottom_titles d_flx jc_spb">
-          <Link to="/">
+          <Link to="/brands">
             <h3 className="title d_flx ali_c jc_c">
               <i className="hzt-icon lists">&#xe802;</i>
               <span className="text">all brands</span>
             </h3>
           </Link>
-          <Link to="/">
+          <Link to="/rumored">
             <h3 className="title d_flx ali_c jc_c">
               <i className="hzt-icon sound">&#xe803;</i>
               <span className="text">rumor mill</span>
